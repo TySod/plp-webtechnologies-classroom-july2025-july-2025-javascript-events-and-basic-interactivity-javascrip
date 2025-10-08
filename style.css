@@ -1,0 +1,79 @@
+/* General Setup */
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light/Dark Theme Styles */
+.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+.dark-theme {
+    background-color: #333333;
+    color: #f4f4f4;
+}
+
+/* Form Styles */
+form {
+    display: grid;
+    max-width: 400px;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Validation Feedback Styles */
+.error-text {
+    color: red;
+    font-size: 0.85em;
+    min-height: 1.2em; /* Ensure space is reserved for error message */
+}
+#form-message.success {
+    color: green;
+    font-weight: bold;
+}
+
+/* Collapsible Styles */
+.collapsible-header {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.collapsible-header:hover {
+    background-color: #e9e9e9;
+}
+.collapsible-content {
+    /* The core trick: start hidden, then reveal with JavaScript */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    transition: max-height 0.3s ease-out;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+.collapsible-content.active {
+    /* JavaScript will add this class to show content */
+    max-height: 200px; /* Needs to be larger than content height */
+    padding: 10px;
+}
